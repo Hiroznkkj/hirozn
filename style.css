@@ -149,14 +149,16 @@ footer .ion {
     left: 0px;
     z-index: 1;
     transform: translateY(-50%);
-    
+    animation: slide-out 0.4s;
 }
 
 .light #switch button{
+   animation: slide-in 0.5s forwards;
+}
 
-    right: 0px;
-    left: initial;
-   
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
+
 }
 #switch span {
     display: block;
@@ -179,5 +181,28 @@ footer .ion {
     
     .light {
         --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
+
+
+/* animações */
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-out {
+
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
     }
 }
