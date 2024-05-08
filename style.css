@@ -22,6 +22,7 @@
 body {
 
     background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
 }
 
 *{
@@ -38,7 +39,8 @@ body * {
 
 #container {
  
- width: 360px;
+ width: 100%;
+ max-width: 560px;
  margin: 56px auto 0px;
 padding: 0 24px;
 
@@ -133,6 +135,7 @@ footer .ion {
     width: 64px;
 
     margin:4px auto;
+    transition: 1s;
 }
 #switch button {
     width: 32px;
@@ -146,12 +149,14 @@ footer .ion {
     left: 0px;
     z-index: 1;
     transform: translateY(-50%);
+    
 }
 
 .light #switch button{
 
     right: 0px;
     left: initial;
+   
 }
 #switch span {
     display: block;
@@ -162,4 +167,17 @@ footer .ion {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
+    
+}
+
+/* Media Query*/
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(./assets/bg-desktop.jpg);
+
+    }
+    
+    .light {
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
 }
