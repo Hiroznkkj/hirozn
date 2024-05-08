@@ -51,7 +51,8 @@ padding: 24px;
 
 #profile img {
     width: 112px;
-
+    border: 2px solid var(--stroke-color);
+    border-radius: 50%; 
 } 
 
 #profile p {
